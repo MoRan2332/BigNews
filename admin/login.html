@@ -60,8 +60,10 @@
 <script src="./libs/http.js"></script>
 <script>
   $(function () {
+
     $('.input_sub').on('click', function (e) {
       e.preventDefault();
+      localStorage.removeItem('token');
       let username = $('.input_txt').val().trim();
       let password = $('.input_pass').val().trim();
       if (username.length == 0 || password.length == 0) {
